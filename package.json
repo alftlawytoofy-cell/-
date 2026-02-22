@@ -1,0 +1,40 @@
+{
+  "name": "alkhairat-employee-portal",
+  "private": true,
+  "version": "4.0.0",
+  "type": "module",
+  "description": "Unified administrative and financial portal for Al-Khairat Power Station employees.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "cap:sync": "cap sync",
+    "cap:android": "cap open android",
+    "cap:ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "@capacitor/filesystem": "^6.0.0",
+    "@capacitor/preferences": "^6.0.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "lucide-react": "^0.395.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-qr-code": "^2.0.15",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.1"
+  }
+}

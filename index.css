@@ -1,0 +1,94 @@
+/* Base Styles */
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-cairo);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Scrollbar Styling (Webkit) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Scrollbar for Notification Center (Unobtrusive & Visible) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Thinner for unobtrusive look */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 8px;
+}
+
+.dark .custom-scrollbar {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.8);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Card Sheen/Shimmer Animation */
+@keyframes sheen {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 200%;
+    opacity: 0;
+  }
+  100% {
+    left: 200%;
+    opacity: 0;
+  }
+}
+
+.animate-sheen {
+  animation: sheen 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
